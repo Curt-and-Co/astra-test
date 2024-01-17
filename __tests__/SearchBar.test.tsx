@@ -1,6 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import SearchBar from '../src/components/SearchBar';
+import {TextInput} from 'react-native';
 
 describe('SearchBar', () => {
   it('renders correctly', () => {
@@ -17,10 +18,9 @@ describe('SearchBar', () => {
       <SearchBar onSearch={mockOnSearch} />,
     ).root;
 
-    const textInput = instance.findByType('TextInput');
+    const textInput = instance.findByType(TextInput);
     textInput.props.onChangeText('Test Query');
 
-    // Check if onSearch was called with the correct value
     expect(mockOnSearch).toHaveBeenCalledWith('Test Query');
   });
 });

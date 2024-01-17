@@ -11,7 +11,11 @@ import {
 import {Show} from '../api/types';
 
 interface SeriesDetailsProps {
-  seriesData?: Show;
+  seriesData?: {
+    name: Show['name'];
+    summary: Show['summary'];
+    image: Show['image'];
+  };
   isFavourite: boolean;
   unmarkAsFavourite: () => void;
   markAsFavourite: () => void;

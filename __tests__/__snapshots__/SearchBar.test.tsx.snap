@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBar renders correctly 1`] = `
+<View
+  style={
+    {
+      "flexDirection": "row",
+      "marginHorizontal": 16,
+    }
+  }
+>
+  <TextInput
+    onChangeText={[MockFunction]}
+    placeholder="Search TV Series"
+    style={
+      {
+        "backgroundColor": "white",
+        "borderColor": "#fafafa",
+        "borderRadius": 16,
+        "borderWidth": 1,
+        "flex": 1,
+        "padding": 12,
+      }
+    }
+  />
+</View>
+`;

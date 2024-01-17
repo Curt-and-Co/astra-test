@@ -5,7 +5,7 @@ interface SearchBarProps {
   onSearch: (query: string) => void;
 }
 
-const BORDER_COLOR = 'gray';
+const BORDER_COLOR = '#fafafa';
 const BACKGROUND_COLOR = 'white';
 
 const SearchBar: FC<SearchBarProps> = ({onSearch}) => {
@@ -26,11 +26,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   input: {
-    borderWidth: 2,
+    borderWidth: 1,
     borderColor: BORDER_COLOR,
     borderRadius: 16,
     flex: 1,
-    padding: 16,
+    padding: 12,
     backgroundColor: BACKGROUND_COLOR,
   },
 });

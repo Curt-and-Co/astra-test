@@ -1,4 +1,4 @@
-interface Show {
+export interface Show {
   id: number;
   url: string;
   name: string;
@@ -15,8 +15,8 @@ interface Show {
   rating: Rating;
   weight: number;
   network: Network;
-  webChannel: null; // Assuming it's always null, otherwise, define a type for it
-  dvdCountry: null; // Same as above
+  webChannel: null | WebChannel;
+  dvdCountry: null;
   externals: Externals;
   image: Image;
   summary: string;
@@ -30,7 +30,7 @@ interface Schedule {
 }
 
 interface Rating {
-  average: number;
+  average: number | null;
 }
 
 interface Network {
@@ -44,6 +44,13 @@ interface Country {
   name: string;
   code: string;
   timezone: string;
+}
+
+interface WebChannel {
+  id: number;
+  name: string;
+  country: Country;
+  officialSite: string;
 }
 
 interface Externals {
@@ -66,8 +73,7 @@ interface Link {
   href: string;
 }
 
-export interface SearchShowsApiResponse {
-  score: number;
+export interface SearchResponse {
   show: Show;
+  score: number;
 }
-[];

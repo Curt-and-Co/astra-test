@@ -7,12 +7,12 @@ import Root from './src/navigation';
 
 function App(): React.JSX.Element {
   return (
-    <QueryClientProvider client={queryClient}>
-      <NavigationContainer>
+    <NavigationContainer>
+      <QueryClientProvider client={queryClient}>
         <StatusBar barStyle="light-content" />
         <Root />
-      </NavigationContainer>
-    </QueryClientProvider>
+      </QueryClientProvider>
+    </NavigationContainer>
   );
 }
 
